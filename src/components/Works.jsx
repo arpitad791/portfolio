@@ -1,4 +1,4 @@
-import Tilt from "react-tilt";
+import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { github, live } from "../assets";
@@ -39,7 +39,7 @@ const ProjectCard = ({
           <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
             {gitHover && (
               <>
-                <span className="px-2 text-[14px] z-10 absolute -top-14 -right-7 bg-secondary bg-opacity-20 text-white p-1 rounded-md shadow-5xl border-2 border-t-0 border-l-0 border-white/25 backdrop-filter backdrop-blur-sm">
+                <span className="px-2 text-[14px] z-10 absolute -top-14 -right-7 bg-secondary bg-opacity-20 text-black p-1 rounded-md shadow-5xl border-2 border-t-0 border-l-0 border-white/25 backdrop-filter backdrop-blur-sm">
                   See source
                 </span>
                 <div className="border h-14 absolute rotate-45 -top-9 right-10 z-0" />
@@ -48,7 +48,7 @@ const ProjectCard = ({
 
             {liveHover && (
               <>
-                <span className="px-2 text-[14px] z-20 absolute -top-14 -right-14 bg-secondary bg-opacity-20 text-white p-1 rounded-md shadow-5xl border-2 border-t-0 border-l-0 border-white/25 backdrop-filter backdrop-blur-sm">
+                <span className="px-2 text-[14px] z-20 absolute -top-14 -right-14 bg-secondary bg-opacity-20 text-black p-1 rounded-md shadow-5xl border-2 border-t-0 border-l-0 border-white/25 backdrop-filter backdrop-blur-sm">
                   Live demo
                 </span>
                 <div className="border h-14 absolute rotate-45 -top-9 z-0" />
@@ -83,8 +83,8 @@ const ProjectCard = ({
           </div>
         </div>
         <div className="mt-5">
-          <h3 className="text-white font-bold text-[24px] dark:text-neutral-900">{name}</h3>
-          <p className="mt-2 text-secondary text-[14px]">{description}</p>
+          <h3 className="font-bold text-[24px] text-black">{name}</h3>
+          <p className="mt-2 text-black text-[14px]">{description}</p>
         </div>
 
         <div className="mt-4 flex flex-wrap gap-2">
@@ -103,14 +103,18 @@ const Works = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} dark:text-neutral-900`}>What I have built</p>
-        <h2 className={`${styles.sectionHeadText} dark:text-neutral-900`}>Projects.</h2>
+        <p className={`${styles.sectionSubText} text-neutral-900`}>
+          What I have built
+        </p>
+        <h2 className={`${styles.sectionHeadText} dark:text-neutral-900`}>
+          Projects.
+        </h2>
       </motion.div>
 
       <div className="w-full flex">
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
-          className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px] dark:text-neutral-900"
+          className="mt-3 text-[17px] max-w-3xl leading-[30px] text-neutral-900"
         >
           Following projects showcase my skills and experience through
           real-world examples of my work. It reflects my ability to solve

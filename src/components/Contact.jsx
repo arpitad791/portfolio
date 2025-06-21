@@ -1,136 +1,58 @@
-import { useState, useRef } from "react";
-import { motion } from "framer-motion";
-import emailjs from "@emailjs/browser";
-import { styles } from "../styles";
-import Earth from "./canvas/Earth";
-import { SectionWrapper } from "../hoc";
-import { slideIn } from "../utils/motion";
-import { textVariant } from "../utils/motion";
-import Modal from "./Modal";
+import React from "react";
 
 const Contact = () => {
-  const formRef = useRef();
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-  const [loading, setLoading] = useState(false);
-  const [openModal, setOpenModal] = useState(false);
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setForm({ ...form, [name] : value })
-  };
-    
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setLoading(true);
-    emailjs.send(
-      'service_qvxfejm',
-      'template_rhlz2mb',
-      {
-        from_name: form.name,
-        to_name: 'Jose',
-        from_email: form.email,
-        to_email: 'jmonto55@gmail.com',
-        message: form.message,
-      },
-      'f0l_A5FJJq52H6NTB'
-    )
-    .then(() => {
-      setLoading(false);
-      setOpenModal(!openModal);
-      setTimeout(() => {
-        setOpenModal(false);
-      }, 3000);
-      setForm({
-        name: '',
-        email: '',
-        message: '',
-      })
-    }, (error) => {
-      setLoading(false);
-      alert('Something went wrong.')
-    })
-  };
-
   return (
-    <>
-      <motion.div variants={textVariant()}>
-        <h2 className={`${styles.sectionHeadText} dark:text-neutral-900`}>Let's Talk.</h2>
-      </motion.div>
-      <div className="lg:mt-12 lg:flex-row flex-col-reverse flex gap-10 overflow-hidden">
-        <motion.div
-          variants={slideIn("left", "tween", 0.2, 1)}
-          className="flex-[0.75] bg-tertiary p-8 rounded-2xl dark:bg-slate-100 shadow-md"
+    <section
+      id="contact"
+      className="rounded-2xl p-8 mb-12 max-w-7xl mx-auto"
+      data-aos="fade-up"
+    >
+      <h2 className="text-center text-4xl font-extrabold mt-10 text-pink-600 mb-4">
+        My Resume
+      </h2>
+
+      <p className="text-center text-neutral-700 dark:text-neutral-900 text-lg mb-8">
+        Scroll through the preview below or click to view/download the full
+        resume.
+      </p>
+
+      {/* Scrollable Resume Preview Box */}
+      <div className="flex justify-center mb-8">
+        <a
+          href="/resume_arpita.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-full max-w-4xl h-[500px] overflow-y-scroll border border-gray-300 rounded-xl shadow-xl p-4 bg-white hover:shadow-2xl transition-shadow"
         >
-          <p className={`${styles.sectionSubText} dark:text-neutral-900`}>Get in touch</p>
-          <h3 className={`${styles.sectionHeadText} dark:text-neutral-900`}>Contact.</h3>
-
-          <form
-            ref={formRef}
-            onSubmit={handleSubmit}
-            className="mt-12 flex flex-col gap-8"
-          >
-            <label className="flex flex-col">
-              <span className="text-white font-medium mb-4 dark:text-neutral-900">Your Name</span>
-              <input
-                required
-                type="text"
-                name="name"
-                value={form.name}
-                onChange={handleChange}
-                placeholder="What's your name?"
-                className="bg-neutral-800 py-4 px-6 placeholder:text-secondary rounded-lg outlined-none border-none font-medium dark:bg-slate-200 dark:text-neutral-900"
-              />
-            </label>
-
-            <label className="flex flex-col">
-              <span className="text-white font-medium mb-4 dark:text-neutral-900">Your Email</span>
-              <input
-                required
-                type="email"
-                name="email"
-                value={form.email}
-                onChange={handleChange}
-                placeholder="What's your email?"
-                className="bg-neutral-800 py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium dark:bg-slate-200 dark:text-neutral-900"
-              />
-            </label>
-
-            <label className="flex flex-col">
-              <span className="text-white font-medium mb-4 dark:text-neutral-900">Your Message</span>
-              <textarea
-                required
-                rows="7"
-                name="message"
-                value={form.message}
-                onChange={handleChange}
-                placeholder="Write your message!"
-                className="bg-neutral-800 py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium dark:bg-slate-200 dark:text-neutral-900"
-              />
-            </label>
-
-            <button
-              type="submit"
-              className="bg-neutral-800 py-3 px-8 outline-none w-fit text-white font-bold shadow-md rounded-xl dark:bg-slate-200 dark:text-neutral-900"
-            >
-              {loading ? "Sending..." : "Send"}
-            </button>
-          </form>
-        </motion.div>
-
-        <motion.div
-          variants={slideIn("right", "tween", 0.2, 1)}
-          className="xl:flex-1 xl: md:h-[550px] h-[350px]"
-        >
-          <Earth />
-        </motion.div>
-        {openModal && <Modal />}
+          <img
+            src="/Icons/resume.jpg"
+            alt="Resume Preview"
+            className="w-full rounded-md"
+          />
+        </a>
       </div>
-    </>
+
+      {/* View / Download Buttons */}
+      <div className="flex flex-col sm:flex-row justify-center gap-6">
+        <a
+          href="/SavyaGupta-Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-pink-600 hover:bg-pink-700 text-white font-semibold py-3 px-6 rounded-full transition-colors text-center shadow-md"
+        >
+          View Resume
+        </a>
+
+        <a
+          href="/SavyaGupta-Resume.pdf"
+          download
+          className="bg-white border border-pink-600 text-pink-700 hover:bg-pink-50 font-semibold py-3 px-6 rounded-full transition-colors text-center shadow-md"
+        >
+          Download Resume
+        </a>
+      </div>
+    </section>
   );
 };
 
-export default SectionWrapper(Contact, "contact");
+export default Contact;

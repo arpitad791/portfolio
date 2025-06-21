@@ -1,16 +1,19 @@
-import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
 import { motion } from "framer-motion";
-import 'react-vertical-timeline-component/style.min.css';
+import "react-vertical-timeline-component/style.min.css";
 
 import { styles } from "../styles";
 import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
 
-const ExperienceCard = ({experience}) => (
+const ExperienceCard = ({ experience }) => (
   <VerticalTimelineElement
-    contentStyle={{ background: '#1e1e1e', color: '#828282' }}
-    contentArrowStyle={{borderRight: '7px solid #828282'}}
+    contentStyle={{ background: "#FFFFFF", color: "#828282" }}
+    contentArrowStyle={{ borderRight: "7px solid #828282" }}
     date={experience.date}
     iconStyle={{ background: experience.iconBg }}
     icon={
@@ -24,17 +27,15 @@ const ExperienceCard = ({experience}) => (
     }
   >
     <div>
-      <h3 className="text-white text-[24px] font-bold">
-        {experience.title}
-      </h3>
-      <p className="text-[#d0cecf] text-[16px] font-semibold" style={{ margin: 0 }}>
+      <h3 className="text-black text-[24px] font-bold">{experience.title}</h3>
+      <p className="text-black text-[16px] font-semibold" style={{ margin: 0 }}>
         {experience.company_name}
       </p>
       <ul className="mt-5 list-disc ml-5 space-y-2">
         {experience.points.map((point, index) => (
           <li
             key={`experience-point-${index}`}
-            className="text-white-100 text-[14px] pl-1 tracking-wider"
+            className="text-black text-[14px] pl-1 tracking-wider"
           >
             {point}
           </li>
@@ -48,8 +49,12 @@ const Experience = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} mt-16 dark:text-neutral-900`}>What I have done so far</p>
-        <h2 className={`${styles.sectionHeadText} dark:text-neutral-900`}>Work Experience.</h2>
+        <p className={`${styles.sectionSubText} mt-16 text-neutral-900`}>
+          What I have done so far
+        </p>
+        <h2 className={`${styles.sectionHeadText} dark:text-neutral-900`}>
+          Work Experience.
+        </h2>
       </motion.div>
       <div className="mt-10 flex flex-col">
         <VerticalTimeline>
@@ -57,10 +62,9 @@ const Experience = () => {
             <ExperienceCard key={index} experience={experience} />
           ))}
         </VerticalTimeline>
-
       </div>
     </>
-  )
-}
+  );
+};
 
-export default SectionWrapper(Experience, '');
+export default SectionWrapper(Experience, "");

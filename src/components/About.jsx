@@ -1,26 +1,24 @@
 import { motion } from "framer-motion";
-import Tilt from "react-tilt";
+import Tilt from "react-parallax-tilt";
 import { styles } from "../styles";
 import { services } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
-import { SectionWrapper } from "../hoc";
 
 const ServiceCard = ({ index, title, icon }) => (
   <div className="xs:w-[250px] w-full">
     <motion.div
       variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
-      className="w-full green-pink-gradient pb-[2px] pr-[2px] rounded-[23px] shadow-card"
+      className="rounded-[22px] bg-white/30 backdrop-blur-lg shadow-md p-[2px] transition-all"
     >
       <Tilt
-        options={{
-          max: 15,
-          scale: 1,
-          speed: 50,
-        }}
-        className="bg-tertiary rounded-[20px] py-10 px-12 min-h-[280px] flex flex-col items-center justify-between"
+        glareEnable={true}
+        glareMaxOpacity={0.25}
+        tiltMaxAngleX={10}
+        tiltMaxAngleY={10}
+        className="bg-white rounded-[20px] py-10 px-6 min-h-[280px] flex flex-col items-center justify-between shadow-xl hover:shadow-2xl transition-all duration-300"
       >
-        <img src={icon} alt={title} className="w-16 object-contain" />
-        <h3 className="text-neutral-300 text-[20px] font-bold text-center">
+        <img src={icon} alt={title} className="w-16 h-16 object-contain mb-4" />
+        <h3 className="text-pink-600 text-[20px] font-semibold text-center">
           {title}
         </h3>
       </Tilt>
@@ -30,21 +28,27 @@ const ServiceCard = ({ index, title, icon }) => (
 
 const About = () => {
   return (
-    <>
+    <section
+      className={`relative w-full px-6 sm:px-10 py-20 max-w-7xl mx-auto`}
+    >
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} dark:text-neutral-800`}>Introduction</p>
-        <h2 className={`${styles.sectionHeadText} dark:text-neutral-800`}>Overview.</h2>
+        <p className="text-[14px] text-neutral-600 uppercase tracking-wider mb-2">
+          👋 Introduction
+        </p>
+        <h2 className="text-4xl sm:text-5xl font-extrabold text-pink-600 mb-6">
+          About Me
+        </h2>
       </motion.div>
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-[#d0cecf] text-[17px] max-w-3xl leading-[30px] dark:text-neutral-800"
+        className="mt-4 text-neutral-700 text-[17px] max-w-3xl leading-[30px] bg-white/50 p-5 rounded-2xl shadow-lg backdrop-blur-md border border-white/40"
       >
-        I'm a full-stack software developer with experience in Typescript,
-        Javascript, and Ruby, and expertise in frameworks like React, Next.js, and
-        Ruby on Rails. I'm a quick learner and collaborate closely with clients to
-        create efficient, scalable, and user-friendly solutions that solve
-        real-world problems. Let's work together to bring your ideas to life!
+        I’m a passionate full-stack software developer with hands-on experience
+        in TypeScript, JavaScript, and Ruby. I specialize in React, Next.js, and
+        Ruby on Rails, focusing on building elegant, scalable, and user-friendly
+        solutions. Whether it's crafting smooth UI experiences or developing
+        robust backend systems, I love turning ideas into impactful products.
       </motion.p>
 
       <div className="mt-20 flex justify-center flex-wrap gap-10">
@@ -52,8 +56,8 @@ const About = () => {
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
       </div>
-    </>
+    </section>
   );
 };
 
-export default SectionWrapper(About, "about");
+export default About;

@@ -32,7 +32,7 @@ import {
   ruby,
   jest,
   reactest,
-  bookstore
+  bookstore,
 } from "../assets";
 
 export const navLinks = [
@@ -46,7 +46,7 @@ export const navLinks = [
   },
   {
     id: "contact",
-    title: "Contact",
+    title: "Resume",
   },
 ];
 
@@ -214,8 +214,10 @@ const projects = [
       },
     ],
     image: bookstore,
-    source_code_link: "https://github.com/jmonto55/book-an-appointment-frontend",
-    live_demo_link: "https://book-an-appointment-frontend-git-dev-jmonto55.vercel.app/",
+    source_code_link:
+      "https://github.com/jmonto55/book-an-appointment-frontend",
+    live_demo_link:
+      "https://book-an-appointment-frontend-git-dev-jmonto55.vercel.app/",
   },
   {
     name: "SmartBudget",

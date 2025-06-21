@@ -9,7 +9,7 @@ const Computers = ({ isMobile }) => {
 
   return (
     <mesh>
-      <hemisphereLight intensity={0.5} groundColor='black' />
+      <hemisphereLight intensity={0.5} groundColor="black" />
       <spotLight
         position={[-10, 100, 10]}
         angle={0.12}
@@ -63,7 +63,7 @@ const ComputersCanvas = () => {
 
   return (
     <Canvas
-      frameloop='demand'
+      frameloop="demand"
       shadows
       dpr={[1, 2]}
       camera={{ position: [20, 6, -5], fov: 25 }}
