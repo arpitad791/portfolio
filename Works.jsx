@@ -1,10 +1,10 @@
 import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
-import { styles } from "../styles";
-import { github, live } from "../assets";
-import { SectionWrapper } from "../hoc";
-import { projects } from "../constants";
-import { fadeIn, textVariant } from "../utils/motion";
+import { styles } from "./src/styles";
+import { github, live } from "./src/assets";
+import { SectionWrapper } from "./src/hoc";
+import { projects } from "./src/constants";
+import { fadeIn, textVariant } from "./src/utils/motion";
 import { useState } from "react";
 
 const ProjectCard = ({
@@ -102,16 +102,14 @@ const ProjectCard = ({
 const Works = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} text-neutral-900`}>
-          What I have built
-        </p>
+      {/* <motion.div variants={textVariant()}>
+        <p className={` text-black`}>What I have built</p>
         <h2 className={`${styles.sectionHeadText} dark:text-neutral-900`}>
           Projects.
         </h2>
-      </motion.div>
+      </motion.div> */}
 
-      <div className="w-full flex">
+      {/* <div className="w-full flex">
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
           className="mt-3 text-[17px] max-w-3xl leading-[30px] text-neutral-900"
@@ -127,9 +125,9 @@ const Works = () => {
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} {...project} index={index} />
         ))}
-      </div>
+      </div> */}
     </>
   );
 };
 
-export default SectionWrapper(Works, "work");
+export default SectionWrapper(Works, "work1");

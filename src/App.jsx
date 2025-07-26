@@ -5,12 +5,13 @@ import {
   Hero,
   Navbar,
   Tech,
-  Works,
+  // Works,
 } from "./components";
 import Footer from "./components/Footer";
 import { BrowserRouter } from "react-router-dom";
 
 const App = () => {
+  const navabr1 = "lodu";
   return (
     <BrowserRouter>
       <div className="scroll-smooth relative z-0 bg-primary dark:bg-slate-200">
@@ -18,7 +19,7 @@ const App = () => {
         <Hero />
         <About />
         <Tech />
-        <Works />
+        {/* <Works /> */}
         <Experience />
         <Contact />
         <Footer />

@@ -25,19 +25,20 @@ import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
-import express from  "./tech/express.png";
+import express from "./tech/express.png";
 import space from "./space.png";
 import portfolio from "./portfolio.png";
 import ruby from "./tech/ruby.png";
 import jest from "./tech/jest.png";
 import reactest from "./tech/reactest.png";
 import live from "./live.png";
-import quantumStocks from './quantumStocks.png';
-import bookstore from './bookstore.png';
-import microverse from './microverse.png';
-import logo_w from './logo_w.png';
-import ecrime from './ecrime.png';
-
+import quantumStocks from "./quantumStocks.png";
+import bookstore from "./bookstore.png";
+import microverse from "./microverse.png";
+import logo_w from "./logo_w.png";
+import ecrime from "./ecrime.png";
+import skilledity from "./skilledity.png";
+import kalki from "./kalki.png";
 export {
   logo,
   logo_w,
@@ -78,4 +79,6 @@ export {
   live,
   quantumStocks,
   bookstore,
+  skilledity,
+  kalki,
 };

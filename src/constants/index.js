@@ -33,6 +33,8 @@ import {
   jest,
   reactest,
   bookstore,
+  skilledity,
+  kalki,
 } from "../assets";
 
 export const navLinks = [
@@ -50,29 +52,36 @@ export const navLinks = [
   },
 ];
 
+export const navdescription = [
+  { title: "this is about us" },
+  { title: "this is conatct us" },
+  { title: "this is us" },
+  { title: "this is me us" },
+];
+
 const services = [
   {
     title: "Frontend with React & Redux",
     icon: web,
   },
   {
-    title: "Backend with Prisma, & Ruby on Rails",
+    title: "Backend with Node.js",
     icon: mobile,
   },
   {
-    title: "Database with MongoDB & PostgreSQL",
+    title: "Database with MongoDB & SQL",
     icon: backend,
   },
   {
-    title: "Efficient remote team contributor",
+    title: "Strong collaborator",
     icon: creator,
   },
 ];
 
 const technologies = [
   {
-    name: "TypeScript",
-    icon: typescript,
+    name: "JavaScript",
+    icon: javascript,
   },
   {
     name: "React",
@@ -91,10 +100,6 @@ const technologies = [
     icon: tailwind,
   },
   {
-    name: "Sass",
-    icon: sass,
-  },
-  {
     name: "Three JS",
     icon: threejs,
   },
@@ -107,70 +112,41 @@ const technologies = [
     icon: mongodb,
   },
   {
-    name: "Prisma",
-    icon: express,
-  },
-  {
-    name: "Ruby on Rails",
-    icon: rails,
-  },
-  {
     name: "Git & GitHub",
     icon: git,
-  },
-  {
-    name: "Jest",
-    icon: jest,
-  },
-  {
-    name: "React Test Lib",
-    icon: reactest,
   },
 ];
 
 const experiences = [
   {
-    title: "Full-stack Developer",
-    company_name: "Freelance",
-    icon: logo_w,
-    iconBg: "#1e1e1e",
-    date: "Jan 2023 - Present",
+    title: "Student Intern- Web Developer",
+    company_name: " KalkiFI Solutions Pvt. Ltd.",
+    icon: kalki,
+    iconBg: "#000000",
+    date: "August 2024– September 2024",
     points: [
-      "Developing and maintaining web applications using React.js, Ruby on Rails and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Improved user engagement by approx. 30% through intuitive web interface design using React and Tailwind CSS.",
+      "Pioneered a JavaScript-based, cross-browser compatibility solution, resolving rendering inconsistencies across 5 different browsers and boosting user engagement by improving accessibility for all users.",
+      "Modernized 2+ company websites, ensuring 100% responsiveness and compatibility across devices",
     ],
   },
   {
-    title: "Technical Support Engineer",
-    company_name: "Microverse",
-    icon: microverse,
-    iconBg: "#282828",
-    date: "April 2023 - Present",
+    title: "Student Intern- Web Developer",
+    company_name: "Skilledity Solution Pvt. Ltd.",
+    icon: skilledity,
+    iconBg: "#ffffff",
+    date: "January 2025– May 2025",
     points: [
-      "Carefuly reviewed more than 100 Pull Requests so far implementing features built with technologies like React, Redux, and Ruby on Rails",
-      "Proposing improvements to code organization to improve code quality and overall performance.",
-      "Providing advice and on how to manage complex projects using GitHub projects.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Project Engineer",
-    company_name: "eCrime forense",
-    icon: ecrime,
-    iconBg: "#282828",
-    date: "Jul 2020 - Jun 2022",
-    points: [
-      "Assisted in the implementation of secure architectures for various companies, resulting in substantial cost savings by preventing fraud.",
-      "Conducted over 30 evaluations based on the NIST framework for companies of different sizes.",
+      "Resolved 15+ critical issues in collaboration with design and QA teams, meeting tight 2-week sprints",
+      "Revamped system response times by 35% through code optimization and database query tuning",
+      "Customized Moodle LMS for about 500 students, integrating 5+ new plugins and tailored course structures to institutional needs",
     ],
   },
 ];
 
 const projects = [
   {
-    name: "Quantum Stocks",
+    name: "Portfolio",
     description:
       "Quantum Stocks is a web application where you can visualize detailed information about any stock traded in the six biggest markets.",
     tags: [

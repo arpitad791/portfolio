@@ -14,12 +14,16 @@ const Footer = () => {
         <AiFillLinkedin
           size={30}
           className="cursor-pointer hover:opacity-80"
-          onClick={() => window.open("https://www.linkedin.com/in/jmontodev/")}
+          onClick={() =>
+            window.open(
+              "https://www.linkedin.com/in/arpita-dhamange-443364277/"
+            )
+          }
         />
         <AiFillGithub
           size={30}
           className="cursor-pointer hover:opacity-80"
-          onClick={() => window.open("https://github.com/jmonto55")}
+          onClick={() => window.open("https://github.com/arpitad791")}
         />
       </div>
     </div>

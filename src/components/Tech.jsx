@@ -34,9 +34,6 @@ const Tech = () => {
     return (
       <div>
         <motion.div variants={textVariant()}>
-          <p className="text-black">
-            Appart from advanced JavaScript, HTML & CSS
-          </p>
           <h2
             className={`${styles.sectionHeadText} mb-10 dark:text-neutral-500`}
           >
@@ -59,9 +56,6 @@ const Tech = () => {
     return (
       <div>
         <motion.div variants={textVariant()}>
-          <p className="text-black">
-            Appart from advanced JavaScript, HTML & CSS
-          </p>
           <h2
             className={`${styles.sectionHeadText} mb-10 dark:text-neutral-900`}
           >

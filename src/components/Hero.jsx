@@ -5,7 +5,10 @@ import programmerGirl from "../assets/programmer.json";
 
 const Hero = () => {
   return (
-    <section className="relative w-full h-screen mx-auto bg-gradient-to-b from-white to-pink-100 dark:from-slate-900 dark:to-black">
+    <section
+      id="about"
+      className="relative w-full  h-screen mx-auto bg-gradient-to-b from-white to-pink-100 dark:from-slate-900 dark:to-black"
+    >
       {/* Text & Dot Line */}
       <div
         className={`${styles.paddingX} absolute inset-0 top-[100px] sm:top-[130px] mx-auto max-w-7xl flex flex-col sm:flex-row  items-start gap-6`}
@@ -24,7 +27,7 @@ const Hero = () => {
           </h1>
           <p className="mt-4 text-base xs:text-lg sm:text-xl text-gray-700 dark:text-gray-300 max-w-xl leading-relaxed">
             Full-stack Developer building elegant & scalable Web Applications
-            using React, Next.js, PostgreSQL & more.
+            using React, Next.js & more.
           </p>
         </div>
       </div>

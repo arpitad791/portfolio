@@ -44,11 +44,13 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-neutral-700 text-[17px] max-w-3xl leading-[30px] bg-white/50 p-5 rounded-2xl shadow-lg backdrop-blur-md border border-white/40"
       >
-        I’m a passionate full-stack software developer with hands-on experience
-        in TypeScript, JavaScript, and Ruby. I specialize in React, Next.js, and
-        Ruby on Rails, focusing on building elegant, scalable, and user-friendly
-        solutions. Whether it's crafting smooth UI experiences or developing
-        robust backend systems, I love turning ideas into impactful products.
+        I'm an enthusiastic full-stack developer with hands-on experience in
+        JavaScript, React, Node.js, and Next.js. I've worked on both frontend
+        and backend projects—ranging from responsive portfolio sites to
+        real-time IoT dashboards—focusing on clean design, scalability, and user
+        experience. Whether it’s building intuitive interfaces with React or
+        optimizing performance on the backend, I enjoy transforming ideas into
+        functional, impactful web solutions.
       </motion.p>
 
       <div className="mt-20 flex justify-center flex-wrap gap-10">

@@ -35,7 +35,7 @@ const Contact = () => {
       {/* View / Download Buttons */}
       <div className="flex flex-col sm:flex-row justify-center gap-6">
         <a
-          href="/SavyaGupta-Resume.pdf"
+          href="/resume_arpita.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-pink-600 hover:bg-pink-700 text-white font-semibold py-3 px-6 rounded-full transition-colors text-center shadow-md"
@@ -44,7 +44,7 @@ const Contact = () => {
         </a>
 
         <a
-          href="/SavyaGupta-Resume.pdf"
+          href="/resume_arpita.pdf"
           download
           className="bg-white border border-pink-600 text-pink-700 hover:bg-pink-50 font-semibold py-3 px-6 rounded-full transition-colors text-center shadow-md"
         >
