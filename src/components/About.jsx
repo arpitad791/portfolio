@@ -44,7 +44,7 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-neutral-700 text-[17px] max-w-3xl leading-[30px] bg-white/50 p-5 rounded-2xl shadow-lg backdrop-blur-md border border-white/40"
       >
-        I'm an enthusiastic full-stack developer with hands-on experience in
+        I'm an enthusiastic full-stack developer with hands on experience in
         JavaScript, React, Node.js, and Next.js. I've worked on both frontend
         and backend projects—ranging from responsive portfolio sites to
         real-time IoT dashboards—focusing on clean design, scalability, and user
